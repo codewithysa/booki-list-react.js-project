@@ -18,13 +18,13 @@ const Navbar = () => {
     
       <ul className="navbar-nav ">
         <li className="nav-item mx-5">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
+          <a className="nav-link active" aria-current="page" href="#">MOTIVATIONAL BOOKS</a>
         </li>
         <li className="nav-item mx-5"> 
-          <a className="nav-link" href="#">Features</a>
+          <a className="nav-link" href="#">SALES BOOKS</a>
         </li>
         <li className="nav-item mx-5">
-          <a className="nav-link" href="#">Pricing</a>
+          <a className="nav-link" href="#">COMIC BOOKS</a>
         </li>
       </ul>
       
