@@ -1,0 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Shizuru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+.navbar{
+    background-color: black;
+   margin-top: 10px;
+}
+
+.navbar-brand a {
+    color: greenyellow;
+    font-size: 30px;
+    font-family: 'Shizuru', cursive;
+    text-decoration: none;
+    text-shadow: 2px 2px 8px yellow;
+}
+.nav-item .nav-link{
+    color: greenyellow;
+    font-size: 20px;
+    font-family: 'Roboto Mono', monospace;
+    text-shadow: 2px 2px 8px yellow;
+}
+
+.navbar-collapse{
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Shizuru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+
+.mainview{
+    height: 1000px;
+    background: linear-gradient(120deg, black 30%, rgb(119, 190, 11));
+}
+
+
