@@ -1,62 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
-
-.footer-container{
-  padding-top: 20%;
-  border-radius: 20px;
-  background-image: linear-gradient(to right, greenyellow, black 25%);
+.footer{
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
 }
 
-.footer-one{
-  color: black;
-  width: 100px;
+.footer-content1{
+  width: 70%;
+  height: 300px;
+  color: white;
+  border-radius: 15px;
+  box-shadow: -3px 5px 14px -5px greenyellow;
+  background-image: linear-gradient(to right, rgb(0,100,0), black);
+  margin-bottom: 30px;
+}
+
+.footer-content1 p{
+  padding-top: 8%;
+  padding-left: 20%;
+  line-height: 1.9em;
+}
+
+.footer-logo{
+  color: yellow;
+  bottom: -630px;
+  margin-left: 30%;
   position: absolute;
-   top: 82%;
-   left: 20%;
-   width: 60%;
-
+  font-family: 'Shizuru', cursive;
+  animation: logo 10s infinite;
+ 
 }
 
-.footer-one h3{
-  border-radius: 20px;
-  background-color: #c4c408;
-  height: 150px;
-  padding-left: 20px;
-  padding-top: 35px;
+
+@keyframes logo {
+
+  50%{color: greenyellow; transform: rotateY(-360deg);transition: 8s ease;}
 }
 
-.footer-button{
+.footer-content2{
+  font-family: 'Roboto Mono', monospace;
+  color: black;
+  background-color: rgb(204,204,0);
   position: absolute;
   border-radius: 10px;
-  font-size: 23px;
-  margin-left: 50%;
-  top: 50px;
-  background-color: black;
-  color: white;
-}
-
-.footer-two{
-  border-radius: 20px;
-  color: white;
-  padding-top: 30px;
-  font-size: 15px;
-  font-weight: 400;
+  width: 50%;
+  height: 150px;
+  top: 550px;
 }
 
 .footer-input{
-  position: absolute;
-  top: 69%;
-  margin-left: 45%;
+
+  padding-left: 80px;
 }
 
-.footer-input .input{
- border-top-left-radius: 10px;
-}
-
-.footer-input .input-button{
-  border-bottom-right-radius: 10px;
+.input-label{
+  padding-top: 20px;
+  font-size: 20px;
+  font-weight: 800;
   color: black;
-  background-color: #f7f736;
-  font-weight: 600;
 }
 
+.email{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 2px solid white;
+}
+
+.submit{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 2px solid white;
+}

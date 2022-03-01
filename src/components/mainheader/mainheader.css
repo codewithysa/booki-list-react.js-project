@@ -22,3 +22,36 @@
     font-size: 25px;
     font-family: 'Roboto Mono', monospace;
 }
+
+/*HEADER CAROUSEL COMPONENT CSS*/
+
+.header-carousel{
+  margin-left: 15%;
+   width: 75%;
+   
+}
+
+.image-container{
+    background-image: linear-gradient(to right, greenyellow, black 20%);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 10px;
+
+}
+
+.image:hover{
+    transform: scale(1.1);
+    transition-duration: 0.6s;
+}
+
+.random-books{
+    display: flex;
+     justify-content: center;
+      margin-Top: 10%; 
+      color: greenyellow;
+      font-size: 25px;
+      font-family: 'Shizuru', cursive;
+}

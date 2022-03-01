@@ -2,6 +2,7 @@ import React from 'react';
 import './mainview.css';
 import Navbar from '../header/navbar';
 import HeaderContent from '../mainheader/headerContent';
+import HeaderCarousel from '../mainheader/headercarousel';
 import Footer from '../footer/footer';
 
 
@@ -11,9 +12,10 @@ const Mainview = () => {
      <div className='mainview'>
      <Navbar/>
      <HeaderContent/>
-    <div style={{paddingTop: '200px'}}>
-    <Footer/>
-    </div>
+     <HeaderCarousel/>
+  
+  
+
     
      </div> 
   

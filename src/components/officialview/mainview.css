@@ -3,8 +3,8 @@
 
 
 .mainview{
-    height: 1000px;
-    background: linear-gradient(120deg, black 30%, rgb(119, 190, 11));
+    height: 100%vh;
+    background: linear-gradient(120deg, black 50%, rgb(119, 190, 11));
 }
 
 

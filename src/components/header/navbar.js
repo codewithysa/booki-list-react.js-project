@@ -1,10 +1,11 @@
 import React from 'react';
 import './navbar.css';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <>
-    <nav className="navbar navbar-expand-lg">
+    <nav className="navbar navbar-expand-lg fixed-top">
   <div className="container-fluid">
     <div className='navbar-brand ms-5'>
     <a href="#">SoftBook</a>
@@ -18,13 +19,13 @@ const Navbar = () => {
     
       <ul className="navbar-nav ">
         <li className="nav-item mx-5">
-          <a className="nav-link active" aria-current="page" href="#">MOTIVATIONAL BOOKS</a>
+          <Link className="nav-link active" aria-current="page" to="/motivationbook">MOTIVATIONAL BOOKS</Link>
         </li>
         <li className="nav-item mx-5"> 
-          <a className="nav-link" href="#">SALES BOOKS</a>
+          <Link className="nav-link" to="/sales">SALES BOOKS</Link>
         </li>
         <li className="nav-item mx-5">
-          <a className="nav-link" href="#">COMIC BOOKS</a>
+          <Link className="nav-link" to="/comic">COMIC BOOKS</Link>
         </li>
       </ul>
       

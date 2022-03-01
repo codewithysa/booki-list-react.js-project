@@ -4,26 +4,30 @@ import './footer.css';
 const Footer = () => {
   return (
     <>
-    
-    <div className='container footer-container'>
-      <div className='footer-one'>
-       <h3>Ready To Learn? <br/> Talk to us Today..
-       <button className='footer-button'>Get Started</button>
-       </h3>
-      <div className='footer-two'>
-        <p>CONTACT US : lorem ipsum</p>
-        <p>EMAIL : lorem ipsum</p>
-        <p>FACEBOOK PAGE : lorem ipsum</p>
-        <p>INSTAGRAM PAGE : lorem ipsum</p>
+     <div className='footer'>
+       <div className='footer-content1'>
+         <div>
+         <p>CONTACT US : lorem ipsum <br/>
+         EMAIL : lorem ipsum <br/> <br/>
+         FOLLOW US ON:<br/>
+         FACEBOOK : lorem ipsum <br/>
+         INSTAGRAM : lorem ipsum
+        </p>
+      
+         </div>
+         </div>
+       
+       <div className='footer-content2'>
+         <div className='footer-input'>
+           <label className='input-label'>subscribe now</label>
+           <br/> <br/>
+           <input className='email' type="email" size="50"/>
+           <input className='submit' type="button" value="submit" />
+         </div>
+       </div>
 
-
-        <div className='footer-input'>
-        <label>SUBSCRIBE NOW</label> <br/> <br/>
-        <input className='input' type="text" size="50" placeholder='email' />
-        <input className='input-button' type="button" value="submit"/>
-        </div>
-     
-      </div>
+       <div className='footer-logo'>
+        <h1>SoftBook</h1>
        </div>
     </div> 
     
