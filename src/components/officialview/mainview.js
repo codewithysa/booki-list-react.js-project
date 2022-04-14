@@ -1,9 +1,10 @@
 import React from 'react';
 import './mainview.css';
 import Navbar from '../header/navbar';
-import HeaderContent from '../mainheader/headerContent';
-import HeaderCarousel from '../mainheader/headercarousel';
+import HeaderContent from '../mainsection/headerContent';
+import HeaderSearch from '../mainsection/headersearch';
 import Footer from '../footer/footer';
+
 
 
 const Mainview = () => {
@@ -12,13 +13,10 @@ const Mainview = () => {
      <div className='mainview'>
      <Navbar/>
      <HeaderContent/>
-     <HeaderCarousel/>
-  
-  
-
-    
+     <HeaderSearch/>
+     <Footer/>
+   
      </div> 
-  
    
     </>
     

@@ -1,74 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
-.footer{
-  margin-top: 10%;
-  display: flex;
-  justify-content: center;
+.footer-content{
+    color: greenyellow;
+    background-color: rgb(9, 44, 9);
+    width: 30%;
+    font-size: 18px;
+    padding: 60px 50px 50px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
-
-.footer-content1{
-  width: 70%;
-  height: 300px;
-  color: white;
-  border-radius: 15px;
-  box-shadow: -3px 5px 14px -5px greenyellow;
-  background-image: linear-gradient(to right, rgb(0,100,0), black);
-  margin-bottom: 30px;
+.footer-content ul li{
+    list-style-type: none;
 }
-
-.footer-content1 p{
-  padding-top: 8%;
-  padding-left: 20%;
-  line-height: 1.9em;
-}
-
-.footer-logo{
-  color: yellow;
-  bottom: -630px;
-  margin-left: 30%;
-  position: absolute;
-  font-family: 'Shizuru', cursive;
-  animation: logo 10s infinite;
- 
-}
-
-
-@keyframes logo {
-
-  50%{color: greenyellow; transform: rotateY(-360deg);transition: 8s ease;}
+.footer-content ul li a{
+    text-decoration: none;
+    color: white;
 }
 
 .footer-content2{
-  font-family: 'Roboto Mono', monospace;
-  color: black;
-  background-color: rgb(204,204,0);
-  position: absolute;
-  border-radius: 10px;
-  width: 50%;
-  height: 150px;
-  top: 550px;
+    background-color: rgb(123, 170, 36);
+}
+
+.input-container{
+  padding: 90px 40px 10px 40px;
+}
+
+.footer-label{
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
 }
 
 .footer-input{
-
-  padding-left: 80px;
+    border-color: white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
-.input-label{
-  padding-top: 20px;
-  font-size: 20px;
-  font-weight: 800;
-  color: black;
+.input-button{
+    border-color: white;
+    background-color: rgb(16, 63, 16);
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
-.email{
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border: 2px solid white;
+.footer-content3{
+    background-color: rgb(9, 44, 9);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
-.submit{
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border: 2px solid white;
+.footer-brand{
+    color: greenyellow;
+    text-shadow: 2px 2px 8px yellow;
+    padding: 120px 100px 120px;
+    font-family: 'Shizuru', cursive;
+    font-size: 30px;
 }

@@ -1,0 +1,19 @@
+.comic{
+    background-image: linear-gradient(to right, rgb(77, 113, 22),  black, rgb(77, 113, 22));
+    display: flex;
+    justify-content: center;
+}
+
+.comic-container{
+ display: grid;
+ grid-template-columns: repeat(6, 1fr) ;
+ margin-top: 2%;
+ margin-bottom: 50px;
+ gap: 10px;
+}
+
+
+.comic-image{
+    border-radius: 10px;
+}
+

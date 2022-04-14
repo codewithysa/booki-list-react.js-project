@@ -1,27 +1,38 @@
-import React from 'react';
-import {Route, Switch, Redirect} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import MainView from '../src/components/officialview/mainview';
+import React from 'react';
 import NavBar from '../src/components/header/navbar';
-import { MotivationBook } from './components/BooksRoute/motivation/motivationbook';
-import {Sales} from './components/BooksRoute/sales/sales';
-import {Comic} from './components/BooksRoute/comic/comic';
+import Image from './components/BooksRoute/image/image';
+import { Comic } from './components/BooksRoute/comic/comic';
+import {Motivation} from './components/BooksRoute/motivation/motivation';
+import {SalesBook} from './components/BooksRoute/sales/SalesBook';
 
 const App = () => {
   return (
     <>
-  
+<Router>
+  <Switch>
 
+      
+  <Route exact path="/"  Render={() => (<Redirect to="/mainview" />)}>
+     <MainView/>
 
-    <Switch>
-    <Route path="/navbar" component={NavBar}></Route>
-    <Route path="/motivationbook" component={MotivationBook}></Route>
-    <Route path="/sales" component={Sales}></Route>
-    <Route path="/comic"component={Comic}></Route>
-     
-    <Route path="/mainview" component={MainView}/>
-    <Redirect from="/"  to="/mainview"/>
+     </Route>
 
-    </Switch>
+     <Route exact path="/comic">
+     <Comic/>
+     </Route>
+
+     <Route exact path="/motivation">
+     <Motivation/>
+     </Route>
+
+     <Route exact path="/salesbook">
+     <SalesBook/>
+     </Route>
+
+  </Switch>
+</Router>
 
     </>
   
