@@ -17,3 +17,13 @@
     border-radius: 10px;
 }
 
+.pagination li.active a{
+    background-color: green !important;
+    border: 1px solid black !important;
+}
+
+.comic-button{
+    padding: 2px 20px 2px;
+    background-color: yellow;
+    border-radius: 5px;
+}

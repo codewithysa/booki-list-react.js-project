@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import './mainsection.css';
 import {HeaderPagination} from '../mainsection/headerpagination';
 import {useHistory} from 'react-router-dom';
@@ -6,26 +6,35 @@ import {useHistory} from 'react-router-dom';
 
 
 
-
-
 const HeaderImages = ({images, search, postPerPage, totalImages, paginate, currentPage, items}) => {
-const [id, setId] = useState("comicbook");
-  const history = useHistory();
+const history = useHistory();
 
 
-  const imageClick = (x) => {
-    if(x === 'comicbooks'){
-      history.push('/comic');
-    }else if(x === 'motivation'){
-      history.push('/motivation');
-    }else if(x === 'sales'){
-      history.push('/salesbook');
-    }
-  };
 
+//function for onclick image 
+ const imageClick = (value, category) => {
+  history.push({
+    pathname: '/datacontainer', 
+    state: {title: value, category: category}
+  })
+ }
+
+
+
+// conditional function for search item
+ const filterSearch = () => (
+  items.filter((value) => {
+    return value.title.includes(search.toLowerCase())
  
+    }).map((val) => (
+      
+      <div className='item-search'>
+      <img src={val.src} className="images" alt="image" onClick={() => imageClick(val.title, val.category)}/>
+      </div>
+      ))
+ )
 
-  
+
   return (
       <>
 
@@ -38,7 +47,7 @@ const [id, setId] = useState("comicbook");
            {images.map((e, id) => (
             
             <div key={id} className='image'>
-             <img className='images' src={e.src} onClick={() => imageClick(e.category)} alt="e"/>
+             <img className='images' src={e.src} onClick={() => imageClick(e.title, e.category)} alt="e"/>
              </div>
                
              ))}
@@ -52,19 +61,10 @@ const [id, setId] = useState("comicbook");
 
        </div>
         
-     ) : (items.filter((value) => {
-        return value.title.includes(search.toLowerCase())
-            
-        }).map((val) => (
-          
-             <div className='item-search'>
-             <img src={val.src} className="images" alt="image"/>
-             </div>
-          )))}
-
+     ) : filterSearch()}
   
       </>
-   
+    
   )
 }
 

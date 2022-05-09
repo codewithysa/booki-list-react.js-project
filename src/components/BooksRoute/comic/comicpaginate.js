@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const ComicPaginate = ({comicItemCount, comicPerPage, comicPage, comicPaginate}) => {
+export const ComicPaginate = ({comicItemCount, comicPerPage, comicPaginate, comicPage}) => {
 
  const comicNumbers = []
 
@@ -14,7 +14,7 @@ export const ComicPaginate = ({comicItemCount, comicPerPage, comicPage, comicPag
        <ul className="pagination pagination-sm">
          {comicNumbers.map((num) => (
            
-           <li className="page-item">
+           <li className={num == comicPage ? "page-item active" : "page-item"}>
            <a onClick={() => comicPaginate(num)}className="page-link">{num}</a>
            </li>
 

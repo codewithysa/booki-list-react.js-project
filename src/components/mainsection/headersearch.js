@@ -26,20 +26,18 @@ const paginate = (number) => setCurrentPage(number)
        
        <div className='categories'>
 
-      <Link to="/comic" className='link'>
-      <button className='category-button'>Comic</button>
-      </Link>
+       <Link to="/comic" className='link'>
+       <button className='category-button'>Comic</button>
+       </Link>
     
     
-    <Link to="/motivation" className='link'>
-    <button className='category-button'>Motivation</button>
-    </Link>
+       <Link to="/motivation" className='link'>
+       <button className='category-button'>Motivation</button>
+       </Link>
    
-      <Link to="/salesbook" className='link'>
-      <button className='category-button'>Sales</button>
-      </Link>
- 
-   
+        <Link to="/salesbook" className='link'>
+        <button className='category-button'>Sales</button>
+        </Link>
       </div>
 
     <div className='container header-search' style={{marginBottom: '1%'}}>
@@ -50,23 +48,22 @@ const paginate = (number) => setCurrentPage(number)
       //getting the value of input change stored in search state hook
       onChange={(e) => setSearch(e.target.value)}/> 
    
-     </form>
+         </form>
 
-        <div className='random-books'>
+         <div className='random-books'>
           <p>Books for Thought</p>
-        </div>
-    </div>
+         </div>
+         </div>
 
 
- <HeaderImages images={postData}
- items={images}
-  search={search}
-   postPerPage={postPerPage}
-    totalImages={images.length} 
-    paginate={paginate}
-    currentPage={currentPage}/>
-    
- </>
+     <HeaderImages images={postData}
+     items={images}
+     search={search}
+     postPerPage={postPerPage}
+     totalImages={images.length} 
+     paginate={paginate}
+    currentPage={currentPage}/>   
+   </>
     
   )
 }
