@@ -15,7 +15,7 @@ const [value] = useState(location.state);
 
   return (
      <>
-     <div style={{backgroundColor: 'rgb(0,46,0)', height: ' 100vh'}}>
+     <div style={{backgroundColor: 'rgb(0,46,0)',height: '100vh'}}>
 
    <div className='container' >
 
@@ -31,7 +31,7 @@ const [value] = useState(location.state);
 
    <div style={{marginTop: '8%'}}>
 
-   {/* to make every first letter of word title capitalize */}
+   {/* to make every first letter of data title capitalize */}
    <h1 className='title'>{value.title.split(' ').map((word) => {
     return word[0].toUpperCase() + word.substring(1);
    }).join(' ')} </h1>
@@ -39,14 +39,15 @@ const [value] = useState(location.state);
    </div>
 
   
-      <div style={{ display: 'flex', paddingBottom: '50px'}}>
+      <div>
          {/* to render image  */}
-        <div>
+        <div className='story'>
+        <div style={{float: 'left', marginRight: '20px', marginBottom: '20px'}}>
         <img src={value.src} className="chosen-image" alt='clickImage'/>
         </div>
      
-         <div className='story'>
-         <div style={{padding: '5px 100px 5px', color: 'white'}}>
+      
+         <div className='story-words'>
          <h3>Lorem Ipsum</h3>
          <p className='story-words'>{value.story}</p>
         </div>

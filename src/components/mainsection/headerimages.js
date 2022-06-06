@@ -21,7 +21,7 @@ const history = useHistory();
 
 
 
-// conditional function for search item
+// function for search item
  const filterSearch = () => (
   items.filter((value) => {
     return value.title.includes(search.toLowerCase())
@@ -40,13 +40,13 @@ const history = useHistory();
 
      {!search ? (
         <div className='container' style={{paddingBottom: '5%'}}>
-        <div className='header-images'>
+        <div className='header-images' >
           
            <div className='image-container'>
      
            {images.map((e, id) => (
             
-            <div key={id} className='image'>
+            <div key={id} className='image' style={{paddingLeft: '5px'}}>
              <img className='images' src={e.src} onClick={() => imageClick(e.title, e.category)} alt="e"/>
              </div>
                

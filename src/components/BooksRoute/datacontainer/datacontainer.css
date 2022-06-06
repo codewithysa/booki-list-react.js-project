@@ -15,6 +15,24 @@ border-radius: 5px;
 margin-left: 2px;
 }
 
+.story-words{
+    color: white;
+}
+
 .chosen-image{
 border-radius: 5px;
+}
+
+
+
+@media 
+(device-width: 390px)
+and (device-height: 844px) { 
+.story-words{
+    padding: 2px 2px 2px;
+}
+.story-words p{
+    word-break: break-all
+}
+
 }

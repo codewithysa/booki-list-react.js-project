@@ -1,0 +1,63 @@
+.book-container{
+    display: flex;
+    justify-content: center;
+}
+
+.book-items{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: 2%;
+    margin-bottom: 50px;
+    gap: 10px;
+}
+
+.book-image{
+    border-radius: 10px;
+}
+
+.back-button{
+   padding: 2px 20px 2px;
+   border-radius: 5px;
+   background-color: yellow;
+}
+
+/* mobile view css */
+
+@media (max-width: 820px){
+    .book-items{
+        border-radius: 4px;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+        padding: 10px 10px 10px;
+    }
+    .book-image{
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+
+@media 
+(device-width: 390px)
+and (device-height: 844px) { 
+.book-container{
+ margin-top: 30px;
+}
+.book-paginate{
+    padding-bottom: 190px;
+}
+.back-button{
+    margin-top: 50px;
+}
+}
+
+@media 
+(device-width: 820px)
+and (device-height: 1180px) { 
+.book-container{
+ margin-top: 30px;
+}
+.book-paginate{
+    padding-bottom: 43px;
+}
+}

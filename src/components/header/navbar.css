@@ -12,16 +12,17 @@
     font-family: 'Shizuru', cursive;
     text-decoration: none;
     text-shadow: 2px 2px 8px yellow;
-}
-.nav-item {
-    color: greenyellow;
-    font-size: 18px;
-    font-family: 'Roboto Mono', monospace;
-    text-shadow: 2px 2px 8px yellow;
-   
+    margin-left: 10px;
 }
 
-#navbarNav{
-margin-top: 20px;
-margin-left: 40px;
+
+/* mobile view and other devices css */
+
+@media (max-width: 820px){
+    .navbar-brand a{
+        margin-left: 0px;
+    }
+ 
 }
+
+

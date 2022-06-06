@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { useHistory } from 'react-router-dom';
-import './salesbook.css';
+import '../../BooksRoute/booksroute.css';
 import { setSales } from '../../../api/api';
 import {SalePaginate} from './salePaginate';
 
@@ -17,24 +17,31 @@ export const SalesBook = () => {
 
   const history = useHistory();
 
+  const imageClick = (title, category) => {
+    history.push({
+      pathname: '/datacontainer', 
+      state: {title: title, category: category}
+    })
+   }
+
   console.log(sale)
   return (
     <>
   
-  <div style={{backgroundImage: 'linear-gradient(to right, rgb(77, 113, 22),  black, rgb(77, 113, 22))'}}>
+  <div style={{backgroundImage: 'linear-gradient(to right, rgb(77, 113, 22),  black, rgb(77, 113, 22))', height: '100vh'}}>
 
 <div style={{paddingLeft: '60px', paddingTop: '5%'}}>
-<button className="sales-button" onClick={() => history.goBack()}>Back</button>
+<button className="back-button" onClick={() => history.goBack()}>Back</button>
 </div>
 
 
-<div className='sales'>
+<div className='book-container'>
 
-<div className='sales-container'>
+<div className='book-items'>
 
 {salesItem.map((data) => (
 <div>
-<img src={data.src} className="sales-image" alt="motivation"/>
+<img src={data.src} onClick={() => imageClick(data.title, data.category)}className="book-image" alt="motivation"/>
 </div>
 
 ))}
@@ -44,10 +51,13 @@ export const SalesBook = () => {
 
 </div>
 
+<div className='book-paginate'>
 <SalePaginate salesPaginate={salesPaginate}
 postPerPage={postPerPage}
 items={sale.length}
 />
+
+</div>
 
 </div>
   

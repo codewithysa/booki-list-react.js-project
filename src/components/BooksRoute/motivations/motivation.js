@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './motivation.css'
+import '../../BooksRoute/booksroute.css';
 import { setMotivation } from '../../../api/api';
 import { useHistory } from 'react-router-dom';
 import { MotivPaginate } from './motivpaginate';
@@ -19,24 +19,31 @@ export const Motivation = () => {
 
   const motivPaginate = (num) => setPage(num);
 
+  const imageClick = (title, category) => {
+    history.push({
+      pathname: '/datacontainer', 
+      state: {title: title, category: category}
+    })
+   }
+
   return (
      <>
   
     
-      <div style={{backgroundImage: 'linear-gradient(to right, rgb(77, 113, 22),  black, rgb(77, 113, 22))'}}>
+      <div style={{backgroundImage: 'linear-gradient(to right, rgb(77, 113, 22),  black, rgb(77, 113, 22))', height: '100vh'}}>
 
       <div style={{paddingLeft: '60px', paddingTop: '5%'}}>
-      <button className="motiv-button" onClick={() => history.goBack()}>Back</button>
+      <button className="back-button" onClick={() => history.goBack()}>Back</button>
       </div>
     
 
-    <div className='motivation'>
+    <div className='book-container'>
 
-    <div className='motiv-container'>
+    <div className='book-items'>
 
     {motivationData.map((data) => (
      <div>
-    <img src={data.src} className="motiv-image" alt="motivation"/>
+    <img src={data.src} onClick={() => imageClick(data.title, data.category)} className="book-image" alt="motivation"/>
     </div>
 
     ))}
@@ -46,12 +53,14 @@ export const Motivation = () => {
 
     </div>
  
-
-      <MotivPaginate totalItem={motivation.length}
+   <div className='book-paginate'>
+   <MotivPaginate totalItem={motivation.length}
       postPerPage={postPerPage}
       page={page}
       motivPaginate={motivPaginate}
      /> 
+   </div>
+   
 
 
   

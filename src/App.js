@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import MainView from '../src/components/officialview/mainview';
 import React from 'react';
-import NavBar from '../src/components/header/navbar';
 import { Comic } from './components/BooksRoute/comic/comic';
 import {Motivation} from './components/BooksRoute/motivations/motivation'
 import { DataContainer } from './components/BooksRoute/datacontainer/dataContainer';

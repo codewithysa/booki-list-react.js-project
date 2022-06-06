@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './comic.css';
+import '../../BooksRoute/booksroute.css';
 import { setComic } from '../../../api/api';
 import { ComicPaginate } from './comicpaginate';
 import {useHistory} from 'react-router-dom';
@@ -24,38 +24,37 @@ const comicPaginate = (num) => setComicPage(num)
 const history = useHistory();
 
 //function for onclick comic image
- const imageClick = (value, category) => {
+ const imageClick = (title, category) => {
   history.push({
     pathname: '/datacontainer', 
-    state: {title: value, category: category}
+    state: {title: title, category: category}
   })
  }
 
 
   return (
     <>
-     <div style={{backgroundImage: 'linear-gradient(to right,  rgb(77, 113, 22),  black, rgb(77, 113, 22)', paddingBottom: '5px'}}>
+     <div style={{backgroundImage: 'linear-gradient(to right,  rgb(77, 113, 22),  black, rgb(77, 113, 22)', paddingBottom: '5px', height: '100vh'}}>
           
         <div style={{paddingLeft: '60px', paddingTop: '5%'}}>
-         <button className="comic-button"onClick={() => history.goBack()}>Back</button>
+         <button className="back-button"onClick={() => history.goBack()}>Back</button>
         </div>
      
-        <div className="comic">  
+        <div className="book-container">  
 
-         <div className='comic-container'>
+         <div className='book-items'>
          {comicData.map((c) => (
           <div className="comics" >
   
-           <img src={c.src}className="comic-image" onClick={() => imageClick(c.title, c.category)} alt="comic" />
-    
-          
+           <img src={c.src}className="book-image" onClick={() => imageClick(c.title, c.category)} alt="comic" />
           </div>
+
          ))}
          </div>
       
        </div>
     
-       <div className='comic-paginate'>
+       <div className='book-paginate'>
          <ComicPaginate comicItemCount={comicBooks.length}
          comicPage={comicPage}
          comicPerPage={comicPerPage}
