@@ -34,7 +34,7 @@ const history = useHistory();
 
   return (
     <>
-     <div style={{backgroundImage: 'linear-gradient(to right,  rgb(77, 113, 22),  black, rgb(77, 113, 22)', paddingBottom: '5px', height: '100vh'}}>
+     <div style={{backgroundImage: 'linear-gradient(to right,  rgb(77, 113, 22),  black, rgb(77, 113, 22)', height: '100vh'}}>
           
         <div style={{paddingLeft: '60px', paddingTop: '5%'}}>
          <button className="back-button"onClick={() => history.goBack()}>Back</button>

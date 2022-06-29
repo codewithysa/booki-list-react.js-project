@@ -15,7 +15,7 @@ const [value] = useState(location.state);
 
   return (
      <>
-     <div style={{backgroundColor: 'rgb(0,46,0)',height: '100vh'}}>
+     <div style={{backgroundColor: 'rgb(0,46,0)', height: '100vh'}}>
 
    <div className='container' >
 
